@@ -48,3 +48,28 @@
 | Accessing a given cell in List  | O(1)            | O(1)             |
 | Searching a given value in List | O(n)            | O(1)             |
 | Deleting a value from List      | O(1)            | O(1)             |
+
+## Python dictionary
+- A dictionary is a collection which is unordered, changeable and indexed
+
+### Dictionary in memory
+- A hash table is a way of doing key-value lookups. You store the values in an array, and then use a hash function to find the index of the array cell that corresponds to your key-value pair.
+
+### Dictionary vs list
+| Dictionary                                | List                                 |
+|-------------------------------------------|--------------------------------------|
+| Unordered                                 | Ordered                              |
+| Access via keys                           | Access via index                     |
+| Collection of key value pairs             | Collection of elements               |
+| Preferred when you have unique key values | Preferred when you have ordered data |
+| No duplicate members                      | Allow duplicate members              |
+
+### Time and space complexity in python dictionary
+| Operation                         | Time Complexity | Space Complexity |
+|-----------------------------------|-----------------|------------------|
+| Creating a Dictionary             | O(len(dict))    | O(n)             |
+| Inserting a value in a dictionary | O(1)/O(n)       | O(1)             |
+| Traversing a given dictionary     | O(n)            | O(1)             |
+| Accessing a given cell            | O(1)            | O(1)             |
+| Deleting a given value            | O(n)            | O(1)             |
+| Searching a given value           | O(1)            | O(1)             |
