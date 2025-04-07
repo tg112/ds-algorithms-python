@@ -32,3 +32,19 @@
 **When to avoid**
 - Same data type elements 
 - Reserve memory
+
+## Python Lists
+- A list is a data structure that holds an ordered collection of items
+- List can hold various data types. ex) `[1, 'a', 1.1, True, [2, 'b']]`
+
+
+### Time and Space Complexity of Lists
+| Operation                       | Time Complexity | Space Complexity |
+|---------------------------------|-----------------|------------------|
+| Creating an empty List          | O(1)            | O(1)             |
+| Creating a list with elements   | O(n)            | O(n)             |
+| Inserting a value in a list     | O(n)            | O(1)             |
+| Traversing a list               | O(n)            | O(1)             |
+| Accessing a given cell in List  | O(1)            | O(1)             |
+| Searching a given value in List | O(n)            | O(1)             |
+| Deleting a value from List      | O(1)            | O(1)             |
