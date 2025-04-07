@@ -73,3 +73,17 @@
 | Accessing a given cell            | O(1)            | O(1)             |
 | Deleting a given value            | O(n)            | O(1)             |
 | Searching a given value           | O(1)            | O(1)             |
+
+## Tuple
+- A tuple is an immutable sequence of Python objects
+- Tuples are also comparable and hashable
+- Iterating through a tuple is faster than with list
+- implementing it as tuple will guarantee that it remains write-protected
+
+### Time and space complexity in python dictionary
+| Operation                 | Time Complexity | Space Complexity |
+|---------------------------|-----------------|------------------|
+| Creating a Tuple          | O(1)            | O(n)             |
+| Traversing a given Tuple  | O(n)            | O(1)             |
+| Accessing a given element | O(1)            | O(1)             |
+| Searching a given element | O(n)            | O(1)             |
