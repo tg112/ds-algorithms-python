@@ -18,3 +18,9 @@ Class components
 - Name: What is it?
 - Attributes: What describe it?
 - Behavior: What can do it?
+
+## 4 Pillars of OOP
+- **Encapsulation**
+- **Abstraction**
+- **Inheritance**
+- **Polymorphism**

@@ -39,3 +39,76 @@ print(f"User 2 subscribers: {user2.subscribers})")
 print(f"User 2 subscriptions: {user2.subscriptions})")
 
 
+class Character:
+    membership = True
+    # __はdunder methodsを意味する
+    def __init__(self, name: str, age: int):
+        # privateを表すときは慣習として_をつける
+        self._name = name
+        self._age = age
+
+    def shout(self):
+        print(self)
+
+    # 第一引数に cls を取る（これはそのメソッドがどのクラスから呼ばれたかを受け取る）
+    # クラスを操作したいときや、**ファクトリーメソッド（別の形でインスタンスを生成する）**を作りたいときによく使われる
+    # インスタンスにアクセスできない
+    @classmethod
+    def adding_things(cls, num1, num2):
+        return num1 + num2
+
+    # 第一引数に self や cls を取らない
+    # クラスやインスタンスに依存しない汎用的な関数を、クラスの中に整理しておきたいときに使う
+    # classやインスタンスにアクセスできない
+    @staticmethod
+    def adding_things2(cls, num1, num2):
+        return num1 + num2
+
+    def speak(self):
+        print(f'my name is {self._name}')
+
+character1 = Character("John", 20)
+print(Character.adding_things(1,2))
+character1.speak()
+
+
+class User:
+    def sign_in(self):
+        print('logged in')
+
+print('inheritance')
+# inheritanceは親クラスを引数で受け取る
+class Wizard(User):
+    def __init__(self, name: str, power: int):
+        self.name = name
+        self.power = power
+
+    def attack(self):
+        print(f'attacking with power of {self.power}')
+
+class Archer(User):
+    def __init__(self, name: str, num_arrows: int):
+        self.name = name
+        self.num_arrows = num_arrows
+
+    def attack(self):
+        print(f'attacking with arrows:  arrows left-{self.num_arrows}')
+
+wizard = Wizard('Tom', 10)
+archer = Archer('sam', 15)
+wizard.sign_in()
+wizard.attack()
+archer.sign_in()
+archer.attack()
+print(isinstance(wizard, User))   # True
+print(isinstance(wizard, Wizard)) # True
+print(isinstance(wizard, object)) # True Objectはbase class
+
+print('Polymorphism')
+wizard1 = Wizard('John', 60)
+archer1 = Archer('Sammy', 35)
+
+def player_attack(char):
+    return char.attack()
+player_attack(wizard1)
+player_attack(archer1)
